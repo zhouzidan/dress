@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Dress</string>
+
+    <!--activity_main.xml-->
+    <string name="main_redio_btn_1">首页</string>
+    <string name="main_redio_btn_2">发现</string>
+    <string name="main_redio_btn_3">我</string>
+
+    <string name="count_of_people_love_it">%1$d人喜欢</string>
+    
+    <item type="id" name="tag_home_adapter"></item>
+
+
+    <array name="week">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </array>
+
+    <!--fragment_owner.xml-->
+    <string name="owner_title">Dress</string>
+    <string name="owner_subtitle">轻松注册，即可永久保存你的所爱\n换了手机也找得到哦</string>
+    <string name="btn_registe">注册</string>
+    <string name="owner_has_account">已有帐号？<u>点击登陆</u></string>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhou.dress.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/gray_6c"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/radio_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/main_redio_btn_1"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/radio_faxian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:checked="true"
+                android:text="@string/main_redio_btn_2"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/radio_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:checked="true"
+                android:text="@string/main_redio_btn_3"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:layout_weight="1"/>
+
+        </RadioGroup>
+</LinearLayout>

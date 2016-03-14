@@ -11,7 +11,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 public class MainActivity extends FragmentActivity {
-private static  final String TAG = MainActivity.class.getName();
+    private static final String TAG = MainActivity.class.getName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,17 +27,18 @@ private static  final String TAG = MainActivity.class.getName();
     Fragment ownerFragment = null;
 
     RadioGroup radioGroup;
-    private void initVIew(){
+
+    private void initVIew() {
         homeFragment = new HomeFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_content,homeFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                Log.d(TAG,"checkId:"+checkedId);
-                switch (checkedId){
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Log.d(TAG, "checkId:" + checkedId);
+                switch (checkedId) {
                     case R.id.radio_home:
-                        Log.d(TAG,"radio_home is checked");
+                        Log.d(TAG, "radio_home is checked");
                         if (homeFragment == null)
                             homeFragment = new HomeFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
@@ -47,8 +49,8 @@ private static  final String TAG = MainActivity.class.getName();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, faxianFragment).commit();
                         break;
                     case R.id.radio_owner:
-                        Log.d(TAG,"radio_owner is checked");
-                        if(ownerFragment == null)
+                        Log.d(TAG, "radio_owner is checked");
+                        if (ownerFragment == null)
                             ownerFragment = new OwnerFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, ownerFragment).commit();
                         break;

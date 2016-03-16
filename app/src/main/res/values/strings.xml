@@ -27,4 +27,21 @@
     <string name="btn_registe">注册</string>
     <string name="owner_has_account">已有帐号？<u>点击登陆</u></string>
 
+    <!--activity_account_login-->
+    <string name="login_username_hint">请输入您的账号(Email地址)</string>
+    <string name="login_password_hint">请输入您的密码</string>
+    <string name="login_btn_text">登录</string>
+    <string name="login_pwd_forget">忘记密码？</string>
+    <string name="login_self_account_subtitle">使用Dress账号登录</string>
+    <string name="login_other_account_subtitle">使用社交网络账号登录</string>
+    <string name="social_account_weixin">微信</string>
+    <string name="social_account_sina">新浪微博</string>
+    <string name="social_account_qq">QQ</string>
+
+
+    <string name="forget_pwd_btn">获取密码</string>
+
+
+    <string name="text_ok">确定</string>
+    <string name="text_back">返回</string>
 </resources>

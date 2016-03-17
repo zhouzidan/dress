@@ -30,23 +30,20 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     private HomeListAdapter adapter;
     private List<MsgModel> mDatas = null;
-private String TAG = "HomeFragment";
+    private String TAG = "HomeFragment";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_home,null);
+        View view =  inflater.inflate(R.layout.fragment_home,null);
+        initView(view);
+        return  view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        initView();
-    }
-
-    private void initView(){
-        listView = (ListView) (getView().findViewById(R.id.id_listview));
-        swipeRefreshLayout = (SwipeRefreshLayout) getView().findViewById(R.id.id_swipe_ly);
+    private void initView(View view){
+        listView = (ListView) (view.findViewById(R.id.id_listview));
+        swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.id_swipe_ly);
         swipeRefreshLayout.setOnRefreshListener(this);
         mDatas = getMsgModels();
         adapter = new HomeListAdapter(getActivity(),mDatas);

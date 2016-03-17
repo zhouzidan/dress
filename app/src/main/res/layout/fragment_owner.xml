@@ -9,7 +9,7 @@
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:src="@mipmap/ic_settings_white_48dp" />
+        android:src="@mipmap/system_setting" />
 
     <TextView
         android:layout_width="wrap_content"

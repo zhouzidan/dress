@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zhou.dress.account.LoginActivity;
+import com.zhou.dress.account.SignUpActivity;
 
 /**
  * Created by zhou on 16-3-8.
@@ -45,6 +46,7 @@ public class OwnerFragment extends Fragment implements View.OnClickListener{
                 startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
             case R.id.btn_registe:
+                startActivity(new Intent(getActivity(), SignUpActivity.class));
                 break;
         }
     }

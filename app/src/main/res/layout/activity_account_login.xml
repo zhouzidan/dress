@@ -7,16 +7,16 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/img_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/ic_home_black_48dp" />
+            android:src="@mipmap/btn_arrow_left_blue" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,27 +49,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:textColor="@color/gray_6c"
             android:text="@string/login_self_account_subtitle"
+            android:textColor="@color/gray_6c"
             android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_6c" />
+            android:background="@color/gray_dc" />
 
         <EditText
             android:id="@+id/ed_username"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/white"
-            android:hint="@string/login_username_hint" />
+            android:hint="@string/login_username_hint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/gray_6c"
+            android:textColorHint="@color/gray_dc" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginLeft="10dp"
-            android:background="@color/gray_6c" />
+            android:background="@color/gray_dc" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -80,21 +84,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@color/white"
-                android:hint="@string/login_password_hint" />
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/gray_6c"
+                android:textColorHint="@color/gray_dc" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/ic_home_black_48dp" />
+                android:layout_margin="10dp"
+                android:src="@mipmap/hide_blue" />
         </RelativeLayout>
 
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_6c" />
+            android:background="@color/gray_dc" />
     </LinearLayout>
 
 
@@ -102,9 +112,9 @@
         android:id="@+id/tv_foeget_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue"
         android:paddingLeft="10dp"
-        android:text="@string/login_pwd_forget"/>
+        android:text="@string/login_pwd_forget"
+        android:textColor="@color/blue" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,18 +126,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:textColor="@color/gray_6c"
             android:text="@string/login_other_account_subtitle"
+            android:textColor="@color/gray_6c"
             android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_6c" />
+            android:background="@color/gray_dc" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="90dp"
             android:background="@color/white"
             android:orientation="horizontal"
             android:padding="10dp">
@@ -135,15 +145,15 @@
             <LinearLayout
                 android:id="@+id/layout_sina"
                 android:layout_width="wrap_content"
-                android:layout_height="120dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@mipmap/icon_sina" />
 
                 <TextView
@@ -157,15 +167,15 @@
             <LinearLayout
                 android:id="@+id/layout_qq"
                 android:layout_width="wrap_content"
-                android:layout_height="120dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@mipmap/icon_qq" />
 
                 <TextView
@@ -180,15 +190,15 @@
             <LinearLayout
                 android:id="@+id/layout_weixin"
                 android:layout_width="wrap_content"
-                android:layout_height="120dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@mipmap/icon_weixin" />
 
                 <TextView
@@ -205,7 +215,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_6c" />
+            android:background="@color/gray_dc" />
 
 
     </LinearLayout>

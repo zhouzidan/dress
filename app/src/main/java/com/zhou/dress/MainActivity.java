@@ -2,6 +2,7 @@ package com.zhou.dress;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +31,15 @@ public class MainActivity extends FragmentActivity {
 
     private void initVIew() {
         homeFragment = new HomeFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
+        faxianFragment = new FaxianFragment();
+        ownerFragment = new OwnerFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.main_content, homeFragment,"home")
+                .add(R.id.main_content, faxianFragment,"faxian")
+                .add(R.id.main_content, ownerFragment,"owner")
+                .show(homeFragment)
+                .hide(faxianFragment)
+                .hide(ownerFragment).commit();
+
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -39,20 +48,20 @@ public class MainActivity extends FragmentActivity {
                 switch (checkedId) {
                     case R.id.radio_home:
                         Log.d(TAG, "radio_home is checked");
-                        if (homeFragment == null)
-                            homeFragment = new HomeFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
+                        getSupportFragmentManager().beginTransaction().show(homeFragment)
+                        .hide(faxianFragment)
+                        .hide(ownerFragment).commit();
                         break;
                     case R.id.radio_faxian:
-                        if (faxianFragment == null)
-                            faxianFragment = new FaxianFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, faxianFragment).commit();
+                        getSupportFragmentManager().beginTransaction().hide(homeFragment)
+                        .show(faxianFragment)
+                        .hide(ownerFragment).commit();
                         break;
                     case R.id.radio_owner:
                         Log.d(TAG, "radio_owner is checked");
-                        if (ownerFragment == null)
-                            ownerFragment = new OwnerFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, ownerFragment).commit();
+                        getSupportFragmentManager().beginTransaction().hide(homeFragment)
+                        .hide(faxianFragment)
+                        .show(ownerFragment).commit();
                         break;
                 }
 

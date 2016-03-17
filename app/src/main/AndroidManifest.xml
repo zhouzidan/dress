@@ -29,6 +29,9 @@
 
         <activity android:name=".account.ForgetPwdActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+
+        <activity android:name=".account.SignUpActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

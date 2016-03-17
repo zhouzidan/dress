@@ -13,10 +13,10 @@
 
         <ImageView
             android:id="@+id/img_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_vertical"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/btn_arrow_left_blue" />
 
         <TextView
             android:id="@+id/tv_back"
@@ -24,28 +24,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/text_back"
-            android:textColor="@color/black"
+            android:textColor="@color/blue"
             android:textSize="20sp" />
     </LinearLayout>
 
     <EditText
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:paddingLeft="10dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
-        android:hint="@string/login_username_hint" />
+        android:gravity="center_vertical"
+        android:hint="@string/login_username_hint"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/gray_6c"
+        android:textColorHint="@color/gray_dc" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@color/gray_6c"
+        android:padding="10dp"
+        android:background="@color/white_FFF0F5"
         android:text="@string/forget_pwd_btn"
-        android:textSize="18sp"
-        android:textColor="@drawable/btn_textcolor_style" />
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
 
 
 </LinearLayout>

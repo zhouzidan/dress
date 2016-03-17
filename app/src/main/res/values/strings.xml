@@ -41,6 +41,10 @@
 
     <string name="forget_pwd_btn">获取密码</string>
 
+    <!--activity_account_registe.xml-->
+    <string name="signup_password_hint">请设置您的密码(长度在6-16之间)</string>
+    <string name="signup_btn">注册</string>
+
 
     <string name="text_ok">确定</string>
     <string name="text_back">返回</string>

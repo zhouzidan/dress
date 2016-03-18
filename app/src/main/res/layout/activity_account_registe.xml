@@ -23,8 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/text_back"
-            android:textColor="@color/blue"
+            android:text="@string/sign_up_title"
+            android:textColor="@color/black_30"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -46,6 +46,7 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:hint="@string/login_username_hint"
+            android:singleLine="true"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/gray_6c"
@@ -68,12 +69,14 @@
                 android:background="@color/white"
                 android:hint="@string/signup_password_hint"
                 android:inputType="textPassword"
+                android:singleLine="true"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="@color/gray_6c"
                 android:textColorHint="@color/gray_dc" />
 
             <ImageView
+                android:id="@+id/img_pwd_visible"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
@@ -87,16 +90,34 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/gray_dc" />
+
+        <EditText
+            android:id="@+id/ed_notename"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:hint="@string/signup_notename_hint"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/gray_6c"
+            android:textColorHint="@color/gray_dc" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_dc" />
     </LinearLayout>
 
 
     <Button
+        android:id="@+id/btn_registe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:padding="10dp"
         android:background="@color/white_FFF0F5"
-        android:text="@string/signup_btn"
+        android:padding="10dp"
+        android:text="@string/text_next"
         android:textColor="@color/blue"
         android:textSize="18sp" />
 

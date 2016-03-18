@@ -44,8 +44,23 @@
     <!--activity_account_registe.xml-->
     <string name="signup_password_hint">请设置您的密码(长度在6-16之间)</string>
     <string name="signup_btn">注册</string>
-
+    <string name="signup_notename_hint">昵称</string>
+    <string name="signup_success">注册成功</string>
 
     <string name="text_ok">确定</string>
     <string name="text_back">返回</string>
+    <string name="text_next">下一步</string>
+
+    <string name="msg_error_email_empty">邮箱地址不能为空</string>
+    <string name="msg_error_email_invalid">邮箱地址不合法</string>
+    <string name="msg_error_pwd_empty">密码不能为空</string>
+    <string name="msg_error_pwd_invalid">密码长度必须介于6-16位之间</string>
+    <string name="msg_loading">请稍等.....</string>
+    <string name="signup_email_validate_code_send">验证码已发送到邮箱，请查收</string>
+    <string name="sign_up_title">注册最美新娘</string>
+    <string name="msg_error_notename_empty">昵称不能为空</string>
+    <string name="signup_email_validate_introduce">验证码已经发送到邮箱</string>
+    <string name="msg_error_code_empty">验证码不能为空</string>
+    <string name="msg_error_email_has_signup">该邮箱已经被注册。</string>
+    <string name="msg_error_params_exception">参数异常</string>
 </resources>

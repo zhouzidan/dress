@@ -63,4 +63,9 @@
     <string name="msg_error_code_empty">验证码不能为空</string>
     <string name="msg_error_email_has_signup">该邮箱已经被注册。</string>
     <string name="msg_error_params_exception">参数异常</string>
+
+    <item name="guide_container" type="id"/>
+    <string name="welcome">This activity is just a luncher, to fully demo the guide show.\n\nYou need create you own Activity extends from AbsGuideActivity and your own List&lt;SinglePage&gt;\n\nYou could use either the guideshowlib.jar or source code as you wish. :)\n\nDon\'t forget add guideshowlib.jar and android-support-v4.jar to your libs folder.</string>
+    <string name="entry">Entry</string>
+
 </resources>

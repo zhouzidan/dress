@@ -38,6 +38,8 @@
         <activity android:name=".account.SignUpEmailCodeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".guideshow.GuideActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

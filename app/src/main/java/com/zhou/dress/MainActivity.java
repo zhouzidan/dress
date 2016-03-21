@@ -1,5 +1,6 @@
 package com.zhou.dress;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -10,6 +11,7 @@ import android.widget.RadioGroup;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.zhou.dress.guideshow.GuideActivity;
 
 public class MainActivity extends FragmentActivity {
     private static final String TAG = MainActivity.class.getName();
@@ -20,6 +22,7 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
         ImageLoader.getInstance().init(config);
+        startActivity(new Intent(this, GuideActivity.class));
         initVIew();
     }
 

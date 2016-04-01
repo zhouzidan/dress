@@ -20,7 +20,7 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
         ImageLoader.getInstance().init(config);
-        startActivity(new Intent(this, GuideActivity.class));
+//        startActivity(new Intent(this, GuideActivity.class));
         initVIew();
     }
 

@@ -5,7 +5,31 @@
     android:background="@color/gray_dc"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/btn_arrow_left_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sign_up_title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+<!--    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
@@ -26,7 +50,7 @@
             android:text="@string/sign_up_title"
             android:textColor="@color/black_30"
             android:textSize="20sp" />
-    </LinearLayout>
+    </LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,9 +70,9 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:hint="@string/login_username_hint"
-            android:singleLine="true"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:singleLine="true"
             android:textColor="@color/gray_6c"
             android:textColorHint="@color/gray_dc" />
 
@@ -69,9 +93,9 @@
                 android:background="@color/white"
                 android:hint="@string/signup_password_hint"
                 android:inputType="textPassword"
-                android:singleLine="true"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:singleLine="true"
                 android:textColor="@color/gray_6c"
                 android:textColorHint="@color/gray_dc" />
 
@@ -97,9 +121,9 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:hint="@string/signup_notename_hint"
-            android:singleLine="true"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:singleLine="true"
             android:textColor="@color/gray_6c"
             android:textColorHint="@color/gray_dc" />
 
@@ -115,10 +139,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@color/white_FFF0F5"
+        android:background="@drawable/btn_login_style"
         android:padding="10dp"
         android:text="@string/text_next"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
 </LinearLayout>

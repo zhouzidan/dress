@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:summary="处理图片的开源项目"
+        android:title="Glide" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.zhou.androiddemo.glide.GlideActivity"
+            android:targetPackage="com.zhou.androiddemo" />
+    </Preference>
+
+    <Preference
+        android:title="简介" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.zhou.androiddemo.glide.GlideActivity"
+            android:targetPackage="com.zhou.androiddemo" />
+    </Preference>
+    <Preference
+        android:title="欢迎页" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.zhou.androiddemo.glide.GlideActivity"
+            android:targetPackage="com.zhou.androiddemo" />
+    </Preference>
+    <Preference
+        android:title="用户协议" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.zhou.androiddemo.glide.GlideActivity"
+            android:targetPackage="com.zhou.androiddemo" />
+    </Preference>
+    <Preference
+        android:title="DU官方" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.zhou.androiddemo.glide.GlideActivity"
+            android:targetPackage="com.zhou.androiddemo" />
+    </Preference>
+
+</PreferenceScreen>

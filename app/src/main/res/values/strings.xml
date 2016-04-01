@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">最美新娘</string>
+    <string name="app_name">DU-最美新娘</string>
 
     <!--activity_main.xml-->
     <string name="main_redio_btn_1">首页</string>
@@ -64,8 +64,16 @@
     <string name="msg_error_email_has_signup">该邮箱已经被注册。</string>
     <string name="msg_error_params_exception">参数异常</string>
 
+
+    <!--引导页面-->
     <item name="guide_container" type="id"/>
     <string name="welcome">This activity is just a luncher, to fully demo the guide show.\n\nYou need create you own Activity extends from AbsGuideActivity and your own List&lt;SinglePage&gt;\n\nYou could use either the guideshowlib.jar or source code as you wish. :)\n\nDon\'t forget add guideshowlib.jar and android-support-v4.jar to your libs folder.</string>
     <string name="entry">Entry</string>
 
+<!--设置页面-->
+    <string name="setting_title">设置</string>
+    <string name="setting_jianjie">简介</string>
+    <string name="setting_welcome">欢迎页</string>
+    <string name="setting_protocol">用户协议</string>
+    <string name="setting_website">DU官网</string>
 </resources>

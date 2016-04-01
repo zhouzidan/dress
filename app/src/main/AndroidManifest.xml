@@ -9,9 +9,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.dudress.dress.DressApplication"
+        android:name=".DressApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/dress_128px"
+        android:icon="@mipmap/du_dress_icon_108"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -24,21 +24,29 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.dudress.dress.account.LoginActivity"
+        <activity
+            android:name="com.dudress.dress.account.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
-        <activity android:name="com.dudress.dress.account.ForgetPwdActivity"
+        <activity
+            android:name="com.dudress.dress.account.ForgetPwdActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
-        <activity android:name="com.dudress.dress.account.SignUpActivity"
+        <activity
+            android:name="com.dudress.dress.account.SignUpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <activity android:name="com.dudress.dress.account.SignUpEmailCodeActivity"
+        <activity
+            android:name="com.dudress.dress.account.SignUpEmailCodeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <activity android:name="com.dudress.dress.guideshow.GuideActivity"
+        <activity
+            android:name="com.dudress.dress.guideshow.GuideActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".setting.SettingActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

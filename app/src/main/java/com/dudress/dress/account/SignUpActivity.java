@@ -49,7 +49,6 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_registe);
         findViewById(R.id.img_back).setOnClickListener(this);
-        findViewById(R.id.tv_back).setOnClickListener(this);
         emailEditText = (EditText) findViewById(R.id.ed_username);
         passwordEditText = (EditText) findViewById(R.id.ed_pwd);
         noteNameEditText = (EditText) findViewById(R.id.ed_notename);
@@ -64,7 +63,6 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.img_back:
-            case R.id.tv_back:
                 finish();
                 break;
             case R.id.img_pwd_visible:

@@ -39,7 +39,7 @@
     <string name="social_account_qq">QQ</string>
 
 
-    <string name="forget_pwd_btn">获取密码</string>
+
 
     <!--activity_account_registe.xml-->
     <string name="signup_password_hint">请设置您的密码(长度在6-16之间)</string>
@@ -64,6 +64,9 @@
     <string name="msg_error_email_has_signup">该邮箱已经被注册。</string>
     <string name="msg_error_params_exception">参数异常</string>
 
+    <!--找回密码-->
+    <string name="forget_pwd_title">找回密码</string>
+    <string name="forget_pwd_btn">获取密码</string>
 
     <!--引导页面-->
     <item name="guide_container" type="id"/>

@@ -15,7 +15,6 @@ public class ForgetPwdActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pwd);
         findViewById(R.id.img_back).setOnClickListener(this);
-        findViewById(R.id.tv_back).setOnClickListener(this);
     }
 
     @Override

@@ -5,28 +5,29 @@
     android:background="@color/gray_dc"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="horizontal">
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/img_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:src="@mipmap/btn_arrow_left_blue" />
 
         <TextView
-            android:id="@+id/tv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/text_back"
-            android:textColor="@color/blue"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:layout_centerInParent="true"
+            android:text="@string/forget_pwd_title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <EditText
         android:layout_width="match_parent"
@@ -42,14 +43,14 @@
         android:textColorHint="@color/gray_dc" />
 
     <Button
+        android:id="@+id/btn_registe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:background="@drawable/btn_login_style"
         android:padding="10dp"
-        android:background="@color/white_FFF0F5"
         android:text="@string/forget_pwd_btn"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="18sp" />
-
 
 </LinearLayout>

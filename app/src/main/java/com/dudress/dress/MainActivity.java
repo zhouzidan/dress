@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.widget.TextViewCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
+import com.dudress.dress.setting.SettingActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.dudress.dress.guideshow.GuideActivity;
@@ -29,14 +33,17 @@ public class MainActivity extends FragmentActivity {
     Fragment ownerFragment = null;
 
     RadioGroup radioGroup;
-
+    TextView titleTV;
     private void initVIew() {
+
+    titleTV = (TextView) findViewById(R.id.tv_title);
+
         homeFragment = new HomeFragment();
         faxianFragment = new FaxianFragment();
         ownerFragment = new OwnerFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.main_content, homeFragment,"home")
-                .add(R.id.main_content, faxianFragment,"faxian")
-                .add(R.id.main_content, ownerFragment,"owner")
+        getSupportFragmentManager().beginTransaction().add(R.id.main_content, homeFragment, "home")
+                .add(R.id.main_content, faxianFragment, "faxian")
+                .add(R.id.main_content, ownerFragment, "owner")
                 .show(homeFragment)
                 .hide(faxianFragment)
                 .hide(ownerFragment).commit();
@@ -50,19 +57,22 @@ public class MainActivity extends FragmentActivity {
                     case R.id.radio_home:
                         Log.d(TAG, "radio_home is checked");
                         getSupportFragmentManager().beginTransaction().show(homeFragment)
-                        .hide(faxianFragment)
-                        .hide(ownerFragment).commit();
+                                .hide(faxianFragment)
+                                .hide(ownerFragment).commit();
+                        titleTV.setText(R.string.main_redio_btn_1);
                         break;
                     case R.id.radio_faxian:
                         getSupportFragmentManager().beginTransaction().hide(homeFragment)
-                        .show(faxianFragment)
-                        .hide(ownerFragment).commit();
+                                .show(faxianFragment)
+                                .hide(ownerFragment).commit();
+                        titleTV.setText(R.string.main_redio_btn_2);
                         break;
                     case R.id.radio_owner:
                         Log.d(TAG, "radio_owner is checked");
                         getSupportFragmentManager().beginTransaction().hide(homeFragment)
-                        .hide(faxianFragment)
-                        .show(ownerFragment).commit();
+                                .hide(faxianFragment)
+                                .show(ownerFragment).commit();
+                        titleTV.setText(R.string.main_redio_btn_3);
                         break;
                 }
 
@@ -70,4 +80,8 @@ public class MainActivity extends FragmentActivity {
         });
     }
 
+
+    public void showSetting(View view) {
+        startActivity(new Intent(this, SettingActivity.class));
+    }
 }

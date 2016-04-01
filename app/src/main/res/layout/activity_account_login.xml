@@ -7,17 +7,25 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:paddingTop="10dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:paddingBottom="10dp"
-        android:layout_height="wrap_content">
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/btn_arrow_left_blue" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:text="@string/login_btn_text"
-            android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/login_btn_text"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -26,7 +34,8 @@
             android:layout_height="28dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:background="@mipmap/ic_settings_black_48dp"/>
+            android:background="@mipmap/ic_settings_black_48dp"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
@@ -123,8 +132,8 @@
             android:id="@+id/tv_foeget_pwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_marginLeft="60dp"
+            android:padding="10dp"
             android:text="@string/login_pwd_forget"
             android:textColor="@color/blue" />
 
@@ -133,8 +142,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:padding="10dp"
             android:layout_marginRight="60dp"
+            android:padding="10dp"
             android:text="@string/btn_registe"
             android:textColor="@color/blue" />
 

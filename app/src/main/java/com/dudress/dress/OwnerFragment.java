@@ -31,14 +31,14 @@ public class OwnerFragment extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
-//        return inflater.inflate(R.layout.fragment_owner,null);
-        return  inflater.inflate(R.layout.activity_account_login,null);
+        return inflater.inflate(R.layout.fragment_owner,null);
+//        return  inflater.inflate(R.layout.activity_account_login,null);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        initViewForLogin();
+        initView();
     }
 
     private void initView(){

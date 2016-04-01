@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zhou.dress.MainActivity">
+    tools:context="com.dudress.dress.MainActivity">
 
     <FrameLayout
         android:id="@+id/main_content"

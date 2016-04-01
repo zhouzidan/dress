@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_dc"
+    android:background="#E0E0E0"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -109,6 +109,16 @@
             android:background="@color/gray_dc" />
     </LinearLayout>
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/btn_login_style"
+        android:text="@string/login_btn_text" />
 
     <TextView
         android:id="@+id/tv_foeget_pwd"

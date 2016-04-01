@@ -37,15 +37,15 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@mipmap/du_dress_icon_108" />
 
         <TextView
+            android:id="@+id/tv_version_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="2.1.1" />
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,8 +65,8 @@
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
-            android:text="@string/setting_jianjie"
             android:onClick="showJianjie"
+            android:text="@string/setting_jianjie"
             android:textSize="18sp" />
 
         <View
@@ -79,8 +79,8 @@
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
-            android:text="@string/setting_welcome"
             android:onClick="showWelcome"
+            android:text="@string/setting_welcome"
             android:textSize="18sp" />
 
         <View
@@ -93,8 +93,8 @@
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
-            android:text="@string/setting_protocol"
             android:onClick="showProtocol"
+            android:text="@string/setting_protocol"
             android:textSize="18sp" />
 
         <View
@@ -107,8 +107,8 @@
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
-            android:text="@string/setting_website"
             android:onClick="showWebsite"
+            android:text="@string/setting_website"
             android:textSize="18sp" />
 
         <View

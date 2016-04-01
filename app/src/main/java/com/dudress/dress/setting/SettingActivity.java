@@ -2,11 +2,12 @@ package com.dudress.dress.setting;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dudress.dress.R;
+import com.dudress.dress.util.AppUtil;
 
 /**
  * Created by zhou on 16-4-1.
@@ -17,6 +18,8 @@ public class SettingActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         findViewById(R.id.img_back).setOnClickListener(this);
+        TextView versionName = (TextView) findViewById(R.id.tv_version_name);
+        versionName.setText(AppUtil.getAppVersionName(this));
     }
 
     @Override

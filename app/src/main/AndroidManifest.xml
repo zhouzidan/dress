@@ -7,6 +7,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Include following permission if you want to cache images on SD card -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
         android:name=".DressApplication"
@@ -16,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.dudress.dress.MainActivity" android:windowSoftInputMode="adjustPan|stateHidden">
+        <activity
+            android:name="com.dudress.dress.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,6 +54,7 @@
         <activity
             android:name=".setting.SettingActivity"
             android:screenOrientation="portrait"></activity>
+
     </application>
 
 </manifest>

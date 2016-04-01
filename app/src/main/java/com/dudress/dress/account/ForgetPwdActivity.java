@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.dudress.dress.R;
+import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * Created by zhou on 16/3/13.

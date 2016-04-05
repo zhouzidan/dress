@@ -79,4 +79,13 @@
     <string name="setting_welcome">欢迎页</string>
     <string name="setting_protocol">用户协议</string>
     <string name="setting_website">DU官网</string>
+
+
+    <!--activity_page-->
+    <string name="page_title">专栏的名称</string>
+    <string name="page_counts_pic">47张图片</string>
+    <string name="page_counts_point">｜</string>
+    <string name="page_counts_love">47人喜欢</string>
+    <string name="page_via_author">by zhou_guobao</string>
+
 </resources>

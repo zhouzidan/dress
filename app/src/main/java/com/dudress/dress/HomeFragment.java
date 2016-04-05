@@ -1,5 +1,6 @@
 package com.dudress.dress;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.dudress.dress.adapter.HomeListAdapter;
+import com.dudress.dress.detail.PageActivity;
 import com.dudress.dress.model.MsgModel;
 
 import java.util.ArrayList;
@@ -49,6 +51,8 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(TAG,"position:"+position);
+                Intent mIntent = new Intent(getActivity(), PageActivity.class);
+                startActivity(mIntent);
             }
         });
     }

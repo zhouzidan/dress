@@ -31,9 +31,10 @@
         </activity>
 
         <activity
-            android:name="com.dudress.dress.account.LoginActivity"
+            android:name="com.dudress.dress.account.Login1Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"></activity>
 
         <activity
             android:name="com.dudress.dress.account.ForgetPwdActivity"
@@ -43,7 +44,7 @@
         <activity
             android:name="com.dudress.dress.account.SignUpActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"></activity>
         <activity
             android:name="com.dudress.dress.account.SignUpEmailCodeActivity"
             android:screenOrientation="portrait"

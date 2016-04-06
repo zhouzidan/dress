@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.dudress.dress.account.ForgetPwdActivity;
+import com.dudress.dress.account.Login1Activity;
 import com.dudress.dress.account.LoginActivity;
 import com.dudress.dress.account.SignUpActivity;
 import com.dudress.dress.setting.SettingActivity;
@@ -50,7 +51,7 @@ public class OwnerFragment extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.tv_login:
-                startActivity(new Intent(getActivity(), LoginActivity.class));
+                startActivity(new Intent(getActivity(), Login1Activity.class));
                 break;
             case R.id.btn_registe:
                 startActivity(new Intent(getActivity(), SignUpActivity.class));

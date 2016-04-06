@@ -57,12 +57,14 @@
     <string name="msg_error_pwd_invalid">密码长度必须介于6-16位之间</string>
     <string name="msg_loading">请稍等.....</string>
     <string name="signup_email_validate_code_send">验证码已发送到邮箱，请查收</string>
-    <string name="sign_up_title">注册最美新娘</string>
+    <string name="sign_up_title">注册</string>
     <string name="msg_error_notename_empty">昵称不能为空</string>
     <string name="signup_email_validate_introduce">验证码已经发送到邮箱</string>
     <string name="msg_error_code_empty">验证码不能为空</string>
     <string name="msg_error_email_has_signup">该邮箱已经被注册。</string>
     <string name="msg_error_params_exception">参数异常</string>
+    <string name="msg_info_protocal">注册即表示同意<u>DU用户协议</u></string>
+
 
     <!--找回密码-->
     <string name="forget_pwd_title">找回密码</string>

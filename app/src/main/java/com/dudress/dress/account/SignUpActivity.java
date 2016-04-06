@@ -5,14 +5,17 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -25,15 +28,35 @@ import com.dudress.dress.util.SharedpreUtil;
 
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cz.msebera.android.httpclient.Header;
 
 /**
  * Created by zhou on 16-3-17.
  */
-public class SignUpActivity extends Activity implements View.OnClickListener{
-    EditText emailEditText,passwordEditText, noteNameEditText;
-    ImageView pwdVisibleImg;
+public class SignUpActivity extends Activity {
+
+
+    @Bind(R.id.tv_title)
+    TextView titleTextView;
+
+    @Bind(R.id.ed_email)
+    EditText emailEditText ;
+    @Bind(R.id.ed_pwd)
+    EditText passwordEditText;
+
+    @Bind(R.id.btn_signup)
+    Button signUpBtn;
+    @Bind(R.id.tv_signin)
+    TextView signInTextView;
+
+    @Bind(R.id.tv_msg)
+    TextView tvMsg;
+
     int KEY_TAG_PWD_VISIBLE = 1;
     private String TAG = getClass().getSimpleName();
     private Context mContext = this;
@@ -47,52 +70,37 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account_registe);
-        findViewById(R.id.img_back).setOnClickListener(this);
-        emailEditText = (EditText) findViewById(R.id.ed_username);
-        passwordEditText = (EditText) findViewById(R.id.ed_pwd);
-        noteNameEditText = (EditText) findViewById(R.id.ed_notename);
-        pwdVisibleImg = (ImageView)findViewById(R.id.img_pwd_visible);
-        pwdVisibleImg.setOnClickListener(this);
-        pwdVisibleImg.setTag(false);
-        findViewById(R.id.btn_registe).setOnClickListener(this);
-        initView();
+        setContentView(R.layout.activity_account_signup_1);
+        ButterKnife.bind(this);
+
+        titleTextView.setText(R.string.sign_up_title);
+        tvMsg.setText(Html.fromHtml(getString(R.string.msg_info_protocal)));
+//        initView();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.img_back:
-                finish();
-                break;
-            case R.id.img_pwd_visible:
-                boolean last_visible = (Boolean)pwdVisibleImg.getTag();
-                pwdVisibleImg.setTag(!last_visible);
-                if (last_visible){
-                    pwdVisibleImg.setImageResource(R.mipmap.hide_blue);
-                    passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                }else{
-                    pwdVisibleImg.setImageResource(R.mipmap.display_blue);
-                    passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }
-                break;
-            case R.id.btn_registe:
-                String email = emailEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
-                String noteName = noteNameEditText.getText().toString().trim();
-                getValidateVode(email,password,noteName);
-                break;
-        }
+@OnClick(R.id.img_back)
+void clickBack(){
+    finish();
+}
+@OnClick(R.id.btn_signup)
+void clickSignUp(){
+    String email = emailEditText.getText().toString().trim();
+    String password = passwordEditText.getText().toString().trim();
+    getValidateVode(email,password);
+}
+    @OnClick(R.id.tv_signin)
+    void clickSignIn(){
+        startActivity(new Intent(mContext,Login1Activity.class));
+        finish();
     }
+
 
     @Override
     protected void onStop() {
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
-        String noteName = noteNameEditText.getText().toString().trim();
         SharedpreUtil.setStringToSP(mContext,KEY_EMAIL_CAHCE,email);
         SharedpreUtil.setStringToSP(mContext,KEY_PASSWORD_CAHCE,password);
-        SharedpreUtil.setStringToSP(mContext,KEY_NOTENAME_CAHCE,noteName);
         super.onStop();
     }
 
@@ -103,8 +111,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
             String code = data.getStringExtra(SignUpEmailCodeActivity.KEY_EMAIL_CODE);
             String email = emailEditText.getText().toString().trim();
             String password = passwordEditText.getText().toString().trim();
-            String noteName = noteNameEditText.getText().toString().trim();
-            signUp(email,password,noteName,code);
+            signUp(email,password,code);
             showLoadingDialog();
         }
     }
@@ -113,12 +120,12 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
     private void initView(){
         String email = SharedpreUtil.getStringFromSP(mContext,KEY_EMAIL_CAHCE);
         String password = SharedpreUtil.getStringFromSP(mContext,KEY_PASSWORD_CAHCE);
-        String notename = SharedpreUtil.getStringFromSP(mContext,KEY_NOTENAME_CAHCE);
-        emailEditText.setText(email != null ? email:null);
-        passwordEditText.setText(password != null ? password:null);
-        noteNameEditText.setText(notename != null ? notename:null);
+        if (TextUtils.isEmpty(email) == false)
+            emailEditText.setText(email);
+        if (TextUtils.isEmpty(password) == false)
+            passwordEditText.setText(password);
     }
-    private void getValidateVode(String email, String password, String noteName){
+    private void getValidateVode(String email, String password){
         if (TextUtils.isEmpty(email) == true){
             Toast.makeText(mContext,R.string.msg_error_email_empty,Toast.LENGTH_SHORT).show();
         }else if(email.matches(Patterns.EMAIL_ADDRESS.pattern()) == false){
@@ -127,9 +134,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
             Toast.makeText(this,R.string.msg_error_pwd_empty,Toast.LENGTH_SHORT).show();
         }else if(password.length() < 6 || password.length() > 16){
             Toast.makeText(mContext,R.string.msg_error_pwd_invalid,Toast.LENGTH_SHORT).show();
-        } else if(TextUtils.isEmpty(noteName)){
-            Toast.makeText(mContext,R.string.msg_error_notename_empty,Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             RequestParams requestParams = new RequestParams();
             requestParams.add("type","signup");
             requestParams.add("datatype","email");
@@ -139,13 +144,12 @@ public class SignUpActivity extends Activity implements View.OnClickListener{
         }
     }
 
-    private void signUp(String email, String password, String noteName,String code){
+    private void signUp(String email, String password,String code){
         RequestParams requestParams = new RequestParams();
         requestParams.add("method","signup");
         requestParams.add("datatype","email");
         requestParams.add("data",email);
         requestParams.add("validateCode",code);
-        requestParams.add("notename",noteName);
         requestParams.add("password",password);
         NetUtils.post("account.php", requestParams, signUpResponseHandler);
         showLoadingDialog();

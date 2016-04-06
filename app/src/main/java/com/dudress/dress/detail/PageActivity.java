@@ -53,7 +53,8 @@ public class PageActivity extends FragmentActivity {
         String imgUrl = "http://img4.duitang.com/uploads/item/201602/29/20160229121022_rFktZ.jpeg";
         ImageLoader.getInstance().displayImage(imgUrl, faceImg, options);
         gridView = (HeaderGridView) findViewById(R.id.gridview);
-        gridView.addHeaderView(headerView);
+        gridView.addHeaderView(headerView); // 他需要在setAdapter()之前
+        gridView.setAdapter(twoAdapter);
 
         lstImageItem = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < 10; i++) {
@@ -64,7 +65,6 @@ public class PageActivity extends FragmentActivity {
         }
         initTwoAdapter();
         //添加并且显示
-        gridView.setAdapter(twoAdapter);
     }
 
     @OnClick(R.id.showTwoImg)

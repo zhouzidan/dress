@@ -2,6 +2,7 @@ package com.dudress.dress;
 
 import android.app.Application;
 
+import com.dudress.dress.util.ImageLoaderUtil;
 import com.tencent.bugly.crashreport.CrashReport;
 
 
@@ -13,5 +14,6 @@ public class DressApplication extends Application {
     public void onCreate() {
         super.onCreate();
         CrashReport.initCrashReport(getApplicationContext(), "900024227", false);
+        ImageLoaderUtil.loadConfig(this);
     }
 }

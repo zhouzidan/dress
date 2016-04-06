@@ -1,19 +1,15 @@
 package com.dudress.dress;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.support.v4.widget.TextViewCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.dudress.dress.setting.SettingActivity;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.dudress.dress.guideshow.GuideActivity;
 
 public class MainActivity extends FragmentActivity {
     private static final String TAG = MainActivity.class.getName();
@@ -22,8 +18,6 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
-        ImageLoader.getInstance().init(config);
 //        startActivity(new Intent(this, GuideActivity.class));
         initVIew();
     }

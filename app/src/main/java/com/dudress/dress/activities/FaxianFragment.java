@@ -1,4 +1,4 @@
-package com.dudress.dress;
+package com.dudress.dress.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.dudress.dress.R;
 
 /**
  * Created by zhou on 16-3-8.

@@ -33,4 +33,5 @@ dependencies {
     compile files('src/main/libs/guideshowlib.jar')
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.github.satyan:sugar:1.4'
 }

@@ -1,4 +1,4 @@
-package com.dudress.dress;
+package com.dudress.dress.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.dudress.dress.R;
 import com.dudress.dress.setting.SettingActivity;
 
 public class MainActivity extends FragmentActivity {
@@ -77,5 +78,17 @@ public class MainActivity extends FragmentActivity {
 
     public void showSetting(View view) {
         startActivity(new Intent(this, SettingActivity.class));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
     }
 }

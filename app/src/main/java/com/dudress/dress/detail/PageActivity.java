@@ -54,7 +54,6 @@ public class PageActivity extends FragmentActivity {
         ImageLoader.getInstance().displayImage(imgUrl, faceImg, options);
         gridView = (HeaderGridView) findViewById(R.id.gridview);
         gridView.addHeaderView(headerView); // 他需要在setAdapter()之前
-        gridView.setAdapter(twoAdapter);
 
         lstImageItem = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < 10; i++) {
@@ -63,7 +62,7 @@ public class PageActivity extends FragmentActivity {
             map.put("ItemText", "NO." + String.valueOf(i));//按序号做ItemText
             lstImageItem.add(map);
         }
-        initTwoAdapter();
+        showTwoImg();
         //添加并且显示
     }
 

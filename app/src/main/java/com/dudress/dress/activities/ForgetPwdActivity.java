@@ -1,4 +1,4 @@
-package com.dudress.dress.account;
+package com.dudress.dress.activities;
 
 import android.app.Activity;
 import android.os.Bundle;

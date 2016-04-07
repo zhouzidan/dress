@@ -1,4 +1,4 @@
-package com.dudress.dress;
+package com.dudress.dress.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.dudress.dress.R;
 import com.dudress.dress.adapter.HomeListAdapter;
 import com.dudress.dress.detail.PageActivity;
 import com.dudress.dress.model.MsgModel;

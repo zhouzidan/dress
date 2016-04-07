@@ -1,0 +1,10 @@
+package com.dudress.dress.db;
+
+import com.orm.SugarRecord;
+import com.orm.dsl.Ignore;
+
+/**
+ * Created by zhou on 16-4-7.
+ */
+public class AccountManager {
+}

@@ -1,4 +1,4 @@
-package com.dudress.dress.account;
+package com.dudress.dress.activities;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -7,14 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.TextUtils;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.util.Patterns;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +24,6 @@ import com.dudress.dress.util.SharedpreUtil;
 
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -90,7 +85,7 @@ void clickSignUp(){
 }
     @OnClick(R.id.tv_signin)
     void clickSignIn(){
-        startActivity(new Intent(mContext,Login1Activity.class));
+        startActivity(new Intent(mContext,LoginActivity.class));
         finish();
     }
 

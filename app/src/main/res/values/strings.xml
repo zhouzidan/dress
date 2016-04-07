@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DU-最美新娘</string>
+    <string name="app_name">DU</string>
 
     <!--activity_main.xml-->
     <string name="main_redio_btn_1">首页</string>

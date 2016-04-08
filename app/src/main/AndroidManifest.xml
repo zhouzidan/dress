@@ -21,16 +21,22 @@
         android:theme="@style/AppTheme">
 
 
-
-        <meta-data android:name="DATABASE" android:value="du.db" />
-        <meta-data android:name="VERSION" android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.dudress.dress.db.models" />
-
+        <meta-data
+            android:name="DATABASE"
+            android:value="du.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.dudress.dress.db.models" />
 
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.AccountFaceEditActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,13 +48,11 @@
         <activity
             android:name=".activities.LoginActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"></activity>
+            android:windowSoftInputMode="adjustPan"></activity>
 
         <activity
             android:name=".activities.ForgetPwdActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activities.SignUpActivity"
@@ -56,15 +60,20 @@
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"></activity>
         <activity
             android:name=".activities.SignUpEmailCodeActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.dudress.dress.guideshow.GuideActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".setting.SettingActivity"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".detail.PageActivity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".detail.PageActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!--
+                <activity android:name=".activities.AccountFaceEditActivity"></activity>
+        -->
 
     </application>
 

@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dudress.dress.db.models.Entry;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.dudress.dress.R;
 import com.dudress.dress.model.MsgModel;
@@ -23,28 +24,35 @@ import java.util.List;
 public class HomeListAdapter extends BaseAdapter {
     private String TAG = "HomeListAdapter";
     private Context mContext;
-    private List<MsgModel> msgModels;
+    private List<Entry> entries;
     private LayoutInflater mInflater; //得到一个LayoutInfalter对象用来导入布局
     private List<Long> firstModelPositions = new ArrayList<>();
 
     //    private View view1 , view2 ;
-    public HomeListAdapter(Context mContext, List<MsgModel> msgModels) {
+ /*   public HomeListAdapter(Context mContext, List<MsgModel> msgModels) {
         this.mContext = mContext;
         this.msgModels = msgModels;
         mInflater = LayoutInflater.from(mContext);
         InitFirstModelPositions();
         Log.d(TAG, "msgModels.size():" + msgModels.size());
         Log.d(TAG, "firstModelPositions.size():" + firstModelPositions.size());
+    }*/
+
+    public HomeListAdapter(Context mContext, List<Entry> entries){
+        this.mContext = mContext;
+        this.entries = entries;
+        mInflater = LayoutInflater.from(mContext);
+        InitFirstModelPositions();
     }
 
     @Override
     public int getCount() {
-        return msgModels.size();
+        return entries.size();
     }
 
     @Override
-    public MsgModel getItem(int position) {
-        return msgModels.get(position);
+    public Entry getItem(int position) {
+        return entries.get(position);
     }
 
     @Override
@@ -103,30 +111,30 @@ public class HomeListAdapter extends BaseAdapter {
 
         if (convertView != null) {
             viewHoler = (ViewHoler) convertView.getTag();
-            MsgModel msgModel = msgModels.get(position);
-            viewHoler.titleTextView.setText(msgModel.getTitle());
-            viewHoler.subTextView.setText(msgModel.getSubtitle());
+            Entry entry = entries.get(position);
+            viewHoler.titleTextView.setText(entry.getTitle());
+            viewHoler.subTextView.setText(entry.getSubtitle());
             if (viewHoler.timeTextView != null)
-                viewHoler.timeTextView.setText(getDateText(msgModel.getTimestamp()));
+                viewHoler.timeTextView.setText(getDateText(entry.getSendtime()));
             if (viewHoler.favouriteTextView != null)
-                viewHoler.favouriteTextView.setText(String.format(mContext.getResources().getString(R.string.count_of_people_love_it), msgModel.getFavouriteCount()));
-            ImageLoader.getInstance().displayImage(msgModel.getImgUrl(), viewHoler.imageView);
+                viewHoler.favouriteTextView.setText(String.format(mContext.getResources().getString(R.string.count_of_people_love_it), entry.getLoves()));
+            ImageLoader.getInstance().displayImage(entry.getPicurl(), viewHoler.imageView);
         }
         return convertView;
     }
 
     private void InitFirstModelPositions() {
         long temp = 0;
-        for (int position = 0; position < msgModels.size(); position++) {
-            MsgModel msgModel = msgModels.get(position);
+        for (int position = 0; position < entries.size(); position++) {
+            Entry entry = entries.get(position);
             if (temp != 0) {
-                boolean inSameDay = TimeUtils.isInSameDay(temp, msgModel.getTimestamp());
+                boolean inSameDay = TimeUtils.isInSameDay(temp, entry.getSendtime());
                 if (inSameDay == false)
                     firstModelPositions.add(Long.valueOf(position));
             } else {
                 firstModelPositions.add(Long.valueOf(position));
             }
-            temp = msgModel.getTimestamp();
+            temp = entry.getSendtime();
         }
     }
 

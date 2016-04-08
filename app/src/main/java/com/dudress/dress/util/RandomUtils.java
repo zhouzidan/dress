@@ -1,5 +1,7 @@
 package com.dudress.dress.util;
 
+import android.text.TextUtils;
+
 import java.util.Random;
 
 /**
@@ -111,7 +113,7 @@ public class RandomUtils {
      *         </ul>
      */
     public static String getRandom(String source, int length) {
-        return StringUtils.isEmpty(source) ? null : getRandom(source.toCharArray(), length);
+        return TextUtils.isEmpty(source) ? null : getRandom(source.toCharArray(), length);
     }
 
     /**

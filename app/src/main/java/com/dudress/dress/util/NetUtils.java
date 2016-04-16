@@ -10,7 +10,7 @@ import com.loopj.android.http.RequestParams;
 public class NetUtils {
 //    private static final String BASE_URL = "http://guobao.applinzi.com/interface/";
     //:192.168.35.202
-private static final String BASE_URL = "http://192.168.35.202/dress_php/interface/";
+private static final String BASE_URL = "http://192.168.1.108/dress_php/index.php/ApiMobile/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 

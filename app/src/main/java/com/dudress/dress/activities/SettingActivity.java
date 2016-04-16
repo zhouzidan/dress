@@ -1,4 +1,4 @@
-package com.dudress.dress.setting;
+package com.dudress.dress.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import com.dudress.dress.util.AppUtil;
 /**
  * Created by zhou on 16-4-1.
  */
-public class SettingActivity extends Activity implements View.OnClickListener{
+public class SettingActivity extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,7 @@ public class SettingActivity extends Activity implements View.OnClickListener{
         findViewById(R.id.img_back).setOnClickListener(this);
         TextView versionName = (TextView) findViewById(R.id.tv_version_name);
         versionName.setText(AppUtil.getAppVersionName(this));
+
     }
 
     @Override

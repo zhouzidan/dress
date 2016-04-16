@@ -1,6 +1,5 @@
 package com.dudress.dress.activities;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -14,14 +13,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 import com.dudress.dress.R;
 import com.dudress.dress.bean.ResultBean;
 import com.dudress.dress.util.GsonUtils;
 import com.dudress.dress.util.NetUtils;
 import com.dudress.dress.util.SharedpreUtil;
-
+import com.dudress.dress.util.ToastUtil;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
 
@@ -33,11 +32,8 @@ import cz.msebera.android.httpclient.Header;
 /**
  * Created by zhou on 16-3-17.
  */
-public class SignUpActivity extends Activity {
+public class SignUpActivity extends BaseActivity {
 
-
-    @Bind(R.id.tv_title)
-    TextView titleTextView;
 
     @Bind(R.id.ed_email)
     EditText emailEditText ;
@@ -67,16 +63,10 @@ public class SignUpActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_signup_1);
         ButterKnife.bind(this);
-
-        titleTextView.setText(R.string.sign_up_title);
         tvMsg.setText(Html.fromHtml(getString(R.string.msg_info_protocal)));
-//        initView();
+        initView();
     }
 
-@OnClick(R.id.img_back)
-void clickBack(){
-    finish();
-}
 @OnClick(R.id.btn_signup)
 void clickSignUp(){
     String email = emailEditText.getText().toString().trim();
@@ -122,19 +112,17 @@ void clickSignUp(){
     }
     private void getValidateVode(String email, String password){
         if (TextUtils.isEmpty(email) == true){
-            Toast.makeText(mContext,R.string.msg_error_email_empty,Toast.LENGTH_SHORT).show();
+            ToastUtil.show(R.string.msg_error_email_empty);
         }else if(email.matches(Patterns.EMAIL_ADDRESS.pattern()) == false){
-            Toast.makeText(this,R.string.msg_error_email_invalid,Toast.LENGTH_SHORT).show();
+            ToastUtil.show(R.string.msg_error_email_invalid);
         }else if(TextUtils.isEmpty(password) == true){
-            Toast.makeText(this,R.string.msg_error_pwd_empty,Toast.LENGTH_SHORT).show();
+            ToastUtil.show(R.string.msg_error_pwd_empty);
         }else if(password.length() < 6 || password.length() > 16){
-            Toast.makeText(mContext,R.string.msg_error_pwd_invalid,Toast.LENGTH_SHORT).show();
+            ToastUtil.show(R.string.msg_error_pwd_invalid);
         } else {
             RequestParams requestParams = new RequestParams();
-            requestParams.add("type","signup");
-            requestParams.add("datatype","email");
-            requestParams.add("data",email);
-            NetUtils.post("getvalidatecode.php", requestParams, getValidateCodeHandler);
+            requestParams.add("email",email);
+            NetUtils.post("Account/getvalidatecode", requestParams, getValidateCodeHandler);
             showLoadingDialog();
         }
     }
@@ -150,7 +138,7 @@ void clickSignUp(){
         showLoadingDialog();
     }
 
-    private JsonHttpResponseHandler getValidateCodeHandler = new JsonHttpResponseHandler(){
+        private JsonHttpResponseHandler getValidateCodeHandler = new JsonHttpResponseHandler(){
 
         @Override
         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

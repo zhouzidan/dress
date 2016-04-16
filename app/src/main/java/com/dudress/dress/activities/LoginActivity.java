@@ -32,11 +32,9 @@ import cz.msebera.android.httpclient.Header;
 /**
  * Created by zhou on 16/3/12.
  */
-public class LoginActivity extends Activity  {
+public class LoginActivity extends BaseActivity  {
 
     Context mContext = this;
-    @Bind(R.id.tv_title)
-    TextView titleTextView;
 
     @Bind(R.id.ed_email)
     EditText emailEditText ;
@@ -55,14 +53,8 @@ public class LoginActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_login_1);
         ButterKnife.bind(this);
-        titleTextView.setText(R.string.login_btn_text);
     }
 
-
-    @OnClick(R.id.img_back)
-    void btnBack(){
-        finish();
-    }
 
     @OnClick(R.id.tv_foeget_pwd)
     void clickForgetPwd(){

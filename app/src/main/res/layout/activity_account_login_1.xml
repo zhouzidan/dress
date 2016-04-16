@@ -6,7 +6,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <include layout="@layout/layout_head" />
+    <!--<include layout="@layout/layout_head" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="@string/login_pwd_forget"
+        android:background="@null"
         android:textColor="@color/blue" />
 
     <Button
@@ -54,6 +55,7 @@
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
+        android:background="@null"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="@string/btn_registe"

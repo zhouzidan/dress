@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@null</item>
     </style>
 
 </resources>

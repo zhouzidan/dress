@@ -36,7 +36,7 @@
 
 
         <activity
-            android:name=".activities.AccountFaceEditActivity"
+            android:name=".activities.MainActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,16 +48,19 @@
         <activity
             android:name=".activities.LoginActivity"
             android:screenOrientation="portrait"
+            android:label="@string/login_btn_text"
             android:windowSoftInputMode="adjustPan"></activity>
 
         <activity
             android:name=".activities.ForgetPwdActivity"
+            android:label="@string/forget_pwd_title"
             android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activities.SignUpActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"></activity>
+            android:label="@string/sign_up_title"
+            ></activity>
         <activity
             android:name=".activities.SignUpEmailCodeActivity"
             android:screenOrientation="portrait"></activity>
@@ -65,10 +68,14 @@
             android:name="com.dudress.dress.guideshow.GuideActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".setting.SettingActivity"
+            android:name=".activities.SettingActivity"
+            android:label="@string/setting_title"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".detail.PageActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.AccountModifyActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--

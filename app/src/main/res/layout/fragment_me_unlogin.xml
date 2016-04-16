@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_f2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="100dp"
+        android:id="@+id/layout_user">
+        <ImageView
+            android:id="@+id/img_face"
+            android:layout_centerVertical="true"
+            android:layout_width="100dp"
+            android:src="@mipmap/du_dress_icon_108"
+            android:layout_height="100dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_face"
+            android:text="请登录"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_menu_forward"/>
+    </RelativeLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="我的晒图"
+    android:gravity="center_vertical"
+    android:padding="8dp"
+    android:drawablePadding="5dp"
+    android:drawableLeft="@mipmap/ic_menu_camera"
+    android:id="@+id/tv_camera" />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的收藏"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@mipmap/ic_menu_star"
+        android:id="@+id/tv_star" />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的通知"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@mipmap/ic_menu_start_conversation"
+        android:id="@+id/tv_msg" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@mipmap/ic_menu_manage"
+        android:id="@+id/tv_setting" />
+
+
+</LinearLayout>

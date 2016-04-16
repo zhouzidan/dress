@@ -10,7 +10,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.dudress.dress.R;
-import com.dudress.dress.setting.SettingActivity;
 
 public class MainActivity extends FragmentActivity {
     private static final String TAG = MainActivity.class.getName();

@@ -5,13 +5,13 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.dudress.dress.detail.HeaderGridView
+    <com.dudress.main.ui.customview.HeaderGridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:horizontalSpacing="6dp"
         android:numColumns="2"
         android:background="@color/gray_dc"
-        android:verticalSpacing="10dp"></com.dudress.dress.detail.HeaderGridView>
+        android:verticalSpacing="10dp"></com.dudress.main.ui.customview.HeaderGridView>
 
 </LinearLayout>
